@@ -1,0 +1,26 @@
+{
+  "name": "web-protect",
+  "version": "1.0.0",
+  "description": "Disable debugger manipulation in runtime. Good for multiplayer gameplays solution or some kind of security important pag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlatnaspirala/web-protect.git"
+  },
+  "keywords": [
+    "web",
+    "protect",
+    "disable",
+    "debugger",
+    "manipulation"
+  ],
+  "author": "Nikola Lukic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zlatnaspirala/web-protect/issues"
+  },
+  "homepage": "https://github.com/zlatnaspirala/web-protect#readme"
+}
