@@ -1,47 +1,54 @@
 🛡️ web-protect
-👤 Author: Nikola Lukić (zlatnaspirala@gmail.com
-) — 2025
+👤 Author: Nikola Lukić — 2025
+
+📧 zlatnaspirala@gmail.com
+
 💼 Currently looking for a job
-🔒 About the Project
 
-web-protect helps safeguard your web application by detecting runtime debugger activity and optionally redirecting or blocking users who attempt to tamper with the page.
+🔍 What is web-protect?
 
-It is useful for:
+web-protect is a lightweight security helper designed to make runtime debugging and tampering more difficult on web pages.
 
-🕹️ Multiplayer gameplay protection
+It provides:
 
-🛑 Preventing cheating or runtime manipulation
+🔒 Debugger detection
 
-🔐 Sensitive / security-critical pages
+🚫 Optional console disabling
+
+👁️ Tab visibility tracking
+
+⚠️ Runtime tamper-protection
+
+🕹️ Useful for multiplayer game UIs, sensitive dashboards, or anti-cheat logic
 
 ⚠️ Disclaimer
 
-This project is designed to protect web content by detecting active debugging tools and redirecting the user.
+This package is intended solely for protective purposes.
 
 Use it at your own responsibility.
 
-The intention is purely protective — not to harm, disrupt, or interfere with any legitimate user activity.
+Do not use it to harm, disrupt, or interfere with legitimate users.
 
-Please use ethically and in compliance with applicable laws.
+Ensure compliance with local laws and platform policies.
 
-📦 API Definition
-protect( <disableDebugger>, <disableConsoleLogs>, <onVisibilityChangeCallback> )
+📦 Installation
+npm install web-protect
 
-Note: console.error always work for now.
 
-Parameters:
+or
 
-disableDebugger — boolean
-Enable or disable debugger-detection logic.
+yarn add web-protect
 
-disableConsoleLogs — boolean
-Turns off console logging to make debugging harder.
-
-onVisibilityChangeCallback — function
-Custom handler for browser tab visibility changes.
-
+🔧 API
+protect(disableDebugger, disableConsole, onVisibilityChange)
+Parameter	Type	Description
+disableDebugger	boolean	Enables debugger freeze/detection.
+disableConsole	boolean	Disables console functions to make debugging harder.
+onVisibilityChange	function	Custom callback when the tab is hidden or shown.
 🧪 Usage Example
-import { protect } from "protect";
+import { protect } from "web-protect";
+
+let hiddenAt = null;
 
 protect(true, true, () => {
   if (document.visibilityState === "visible") {
@@ -49,7 +56,7 @@ protect(true, true, () => {
       const now = Date.now();
       const hiddenDuration = (now - hiddenAt) / 1000;
 
-      if (parseFloat(hiddenDuration.toFixed(2)) > 1) {
+      if (hiddenDuration > 1) {
         console.log(`🟢⚠️ Tab was hidden for ${hiddenDuration.toFixed(2)} sec.`);
         document.title = document.title.replace("🟢", "🟡");
       }
@@ -62,3 +69,23 @@ protect(true, true, () => {
     hiddenAt = Date.now();
   }
 });
+
+🔒 Console Protection
+
+When disableConsole = true, these console functions are silenced:
+
+log, info, warn, debug, trace
+
+
+This makes runtime debugging significantly harder for attackers.
+
+
+Debugger freeze/detection logic is also included internally.
+
+❤️ Support
+
+If you find this tool useful, consider starring the repository or sharing feedback.
+
+💌 Contact: zlatnaspirala@gmail.com
+
+🧑‍💻 GitHub: https://github.com/zlatnaspirala
