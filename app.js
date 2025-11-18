@@ -19,6 +19,22 @@ export let protect = (db, dc, vc) => {
     // console.error = noop;
     console.debug = noop;
     console.trace = noop;
+    // console.time = noop;
+    // console.timeEnd = noop;
+    // console.timeLog = noop;
+
+    // console.group = noop;
+    // console.groupCollapsed = noop;
+    // console.groupEnd = noop;
+
+    // console.table = noop;
+    // console.dir = noop;
+    // console.dirxml = noop;
+
+    // console.clear = noop;
+    // console.count = noop;
+    // console.countReset = noop;
+    // console.assert = noop;
   }
 
   if(typeof db !== 'undefined') {
