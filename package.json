@@ -1,6 +1,6 @@
 {
   "name": "web-protect",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Disable debugger manipulation in runtime. Good for multiplayer gameplays solution or some kind of security important pag",
   "main": "index.js",
   "scripts": {

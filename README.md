@@ -1,11 +1,11 @@
-🛡️ web-protect
-👤 Author: Nikola Lukić — 2025
+## 🛡️ web-protect
+## 👤 Author: Nikola Lukić — 2025
 
-📧 zlatnaspirala@gmail.com
+### 📧 zlatnaspirala@gmail.com
 
 💼 Currently looking for a job
 
-🔍 What is web-protect?
+### 🔍 What is web-protect?
 
 web-protect is a lightweight security helper designed to make runtime debugging and tampering more difficult on web pages.
 
@@ -31,7 +31,7 @@ Do not use it to harm, disrupt, or interfere with legitimate users.
 
 Ensure compliance with local laws and platform policies.
 
-📦 Installation
+### 📦 Installation
 npm install web-protect
 
 
@@ -46,6 +46,8 @@ disableDebugger	boolean	Enables debugger freeze/detection.
 disableConsole	boolean	Disables console functions to make debugging harder.
 onVisibilityChange	function	Custom callback when the tab is hidden or shown.
 🧪 Usage Example
+
+```js
 import { protect } from "web-protect";
 
 let hiddenAt = null;
@@ -69,8 +71,9 @@ protect(true, true, () => {
     hiddenAt = Date.now();
   }
 });
+```
 
-🔒 Console Protection
+### 🔒 Console Protection
 
 When disableConsole = true, these console functions are silenced:
 
@@ -82,7 +85,7 @@ This makes runtime debugging significantly harder for attackers.
 
 Debugger freeze/detection logic is also included internally.
 
-❤️ Support
+### ❤️ Support
 
 If you find this tool useful, consider starring the repository or sharing feedback.
 
